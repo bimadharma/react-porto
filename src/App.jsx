@@ -1,5 +1,5 @@
 import { Routes, Route, useLocation } from "react-router-dom";
-import "./App.css";
+import "./App.scss";
 import Home from "./containers/home";
 import About from "./containers/about"
 import Resume from "./containers/resume"
@@ -26,6 +26,7 @@ function App() {
       {/* navbar */}
       <Navbar/>
       {/* main page contect */}
+      <div className="App__main-page-content">
       <Routes>
         <Route index path="/" element={<Home />} />
         <Route path="/About" element={<About />} />
@@ -34,6 +35,7 @@ function App() {
         <Route path="/Portfolio" element={<Portfolio />} />
         <Route path="/Contact" element={<Contact />} />
       </Routes>
+      </div>
     </div>
   );
 }

@@ -17,7 +17,7 @@ const ParticlesComponent = () => {
     autoPlay: true,
     background: {
       color: {
-        value: "#1d1d1d",
+        value: "--yellow-theme-background-color",
       },
     },
     fullScreen: {
