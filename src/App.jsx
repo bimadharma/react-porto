@@ -13,14 +13,11 @@ function App() {
   const location = useLocation();
   console.log(location);
 
-  const renderParticleJsIHomePage = location.pathname === "/";
-
-
   return (
     <div className="App">
       {/* particles js */}
 
-      {renderParticleJsIHomePage && <ParticlesComponent/>}
+      <ParticlesComponent/>
       
 
       {/* navbar */}

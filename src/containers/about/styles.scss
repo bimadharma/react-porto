@@ -1,0 +1,140 @@
+.about {
+  &__content {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+
+    &__personalWrapper,
+    &__servicesWrapper {
+      width: 50%;
+    }
+
+    &__servicesWrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__personalWrapper {
+        margin: 2rem;
+      h3 {
+        margin-bottom: 10px;
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: var(--yellow-theme-main-color);
+      }
+
+      h3.personalInformationHeaderText {
+        padding-top: 20px;
+      }
+
+      p {
+        color: var(--yellow-theme-sub-text-color);
+        font-size: 1.65rem;
+        padding-bottom: 20px;
+        border-bottom: 1px dashed var(--yellow-theme-main-color);
+      }
+
+      ul > li {
+        line-height: 1rem;
+        margin-bottom: 15px;
+
+        span.title,
+        span.value {
+          font-size: 18px;
+          font-weight: 700;
+          letter-spacing: 0.5px;
+          border-bottom: 2px solid var(--yellow-theme-main-color);
+          position: relative;
+          display: inline-block;
+          margin-right: 16px;
+          padding-bottom: 5px;
+          color: var(--yellow-theme-sub-text-color);
+        }
+
+        span.value {
+          border: none;
+        }
+      }
+    }
+  }
+
+  &__servicesWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+  }
+
+  .photoWrapper {
+    position: relative;
+    width: 300px;
+    height: 350px;
+    border-radius: 12px;
+    overflow: hidden;
+
+    img.profilePhoto {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .box {
+    position: relative;
+    width: 310px;
+    height: 360px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: hidden; 
+    border-radius: 12px;
+  }
+
+  .box::before {
+    content: "";
+    position: absolute;
+    width: 170px;
+    height: 140%;
+    background: linear-gradient(45deg, #00ccff, #d500f9);
+    animation: rotate 4s linear infinite;
+  }
+
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @media (max-width: 768px) {
+    &__content {
+      flex-direction: column;
+      align-items: stretch;
+
+      &__servicesWrapper {
+        width: auto ;
+        order: -1;
+      }
+
+      
+
+      &__personalWrapper {
+        width: auto;
+        
+        ul > li {
+            span.title,
+            span.value {
+              font-size: 15px;
+              font-weight: 10;
+            }
+          }
+      }
+    }
+  }
+}
