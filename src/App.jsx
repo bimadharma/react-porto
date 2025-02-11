@@ -2,7 +2,6 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import "./App.scss";
 import Home from "./containers/home";
 import About from "./containers/about"
-import Resume from "./containers/resume"
 import Portfolio from "./containers/portfolio"
 import Contact from "./containers/contact"
 import Skills from "./containers/skills"
@@ -27,7 +26,6 @@ function App() {
       <Routes>
         <Route index path="/" element={<Home />} />
         <Route path="/About" element={<About />} />
-        <Route path="/Resume" element={<Resume />} />
         <Route path="/Skills" element={<Skills />} />
         <Route path="/Portfolio" element={<Portfolio />} />
         <Route path="/Contact" element={<Contact />} />

@@ -18,10 +18,6 @@ const data = [
     to: "/skills",
   },
   {
-    label: "Resume",
-    to: "/resume",
-  },
-  {
     label: "Portfolio",
     to: "/portfolio",
   },
@@ -50,7 +46,7 @@ const Navbar = () => {
         <ul className={`navbar__container__menu ${toggleIcon ? "active" : ""}`}>
           {data.map((item, key) => (
             <li key={key} className="navbar__container__menu__item">
-              <Link className="navbar__container__menu__item__links" to={item.to}>
+              <Link className="navbar__container__menu__item__links" to={item.to} onClick={() => setToggleIcon(false)}>
                 {item.label}
               </Link>
             </li>

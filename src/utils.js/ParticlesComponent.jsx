@@ -38,7 +38,7 @@ const ParticlesComponent = () => {
       },
       modes: {
         push: {
-          quantity: 2, // Jumlah partikel yang keluar setiap klik
+          quantity: 5, // Jumlah partikel yang keluar setiap klik
         },
       },
     },

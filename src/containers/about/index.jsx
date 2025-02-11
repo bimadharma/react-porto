@@ -31,8 +31,8 @@ const About = () => {
         <div className="about__content__personalWrapper">
           <Animate
             play
-            duration={1.5}
-            delay={1}
+            duration={1.0}
+            delay={0.5}
             start={{
               transform: "translateX(-900px)",
             }}
@@ -46,8 +46,8 @@ const About = () => {
 
           <Animate
             play
-            duration={1.5}
-            delay={1}
+            duration={1.0}
+            delay={0.5}
             start={{
               transform: "translateX(-900px)",
             }}
@@ -59,20 +59,31 @@ const About = () => {
             <ul>
               {personalDetails.map((item, i) => (
                 <li key={i}>
-                  <span className="title">{item.label}</span>
+                  <span className="title">{item.label}:</span>
                   <span className="value">{item.Value}</span>
                 </li>
               ))}
             </ul>
           </Animate>
         </div>
-
         <div className="about__content__servicesWrapper">
+        <Animate
+            play
+            duration={1.0}
+            delay={0.5}
+            start={{
+              transform: "translateX(900px)",
+            }}
+            end={{
+              transform: "translatex(0px)",
+            }}
+          >
           <div className="box">
             <div className="photoWrapper">
               <img src={profilePhoto} alt="Bima Dharma" className="profilePhoto" />
             </div>
           </div>
+        </Animate>
         </div>
       </div>
     </section>
