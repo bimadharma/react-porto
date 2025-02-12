@@ -4,7 +4,7 @@ import Home from "./containers/home";
 import About from "./containers/about"
 import Portfolio from "./containers/portfolio"
 import Contact from "./containers/contact"
-import Skills from "./containers/skills"
+import Certifications from "./containers/Certifications"
 import Navbar from "./components/navbar";
 import ParticlesComponent from './utils.js/ParticlesComponent';
 
@@ -26,7 +26,7 @@ function App() {
       <Routes>
         <Route index path="/" element={<Home />} />
         <Route path="/About" element={<About />} />
-        <Route path="/Skills" element={<Skills />} />
+        <Route path="/Certifications" element={<Certifications/>} />
         <Route path="/Portfolio" element={<Portfolio />} />
         <Route path="/Contact" element={<Contact />} />
       </Routes>
