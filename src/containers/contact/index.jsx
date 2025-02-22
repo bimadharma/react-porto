@@ -16,7 +16,7 @@ const MyContact = () => {
   return (
     <div className="contact-container">
       <div className="contact-left">
-        <h2>Contact Us</h2>
+        <h2>Share Your Feedback</h2>
         <p>Silakan isi formulir ini untuk saran dan kritik terhadap saya.</p>
       </div>
       <div className="contact-right">
@@ -32,7 +32,7 @@ const MyContact = () => {
                 <td><input type="email" id="email" name="email" value={formData.email} onChange={handleChange} required placeholder="emailnya dong ka"/></td>
               </tr>
               <tr>
-                <td><label htmlFor="question">Pertanyaan:</label></td>
+                <td><label htmlFor="question">saran/kritik:</label></td>
                 <td><textarea id="question" name="question" value={formData.question} onChange={handleChange} required placeholder="kuy isi aja slow.."/></td>
               </tr>
             </tbody>
