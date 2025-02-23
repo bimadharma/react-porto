@@ -3,7 +3,7 @@ import "./App.scss";
 import Home from "./containers/home";
 import About from "./containers/about"
 import Portfolio from "./containers/portfolio"
-import Contact from "./containers/contact"
+import Feedback from "./containers/Feedback"
 import Certifications from "./containers/Certifications"
 import Navbar from "./components/navbar";
 import ParticlesComponent from './utils.js/ParticlesComponent';
@@ -28,7 +28,7 @@ function App() {
         <Route path="/About" element={<About />} />
         <Route path="/Certifications" element={<Certifications/>} />
         <Route path="/Portfolio" element={<Portfolio />} />
-        <Route path="/Contact" element={<Contact />} />
+        <Route path="/Feedback" element={<Feedback />} />
       </Routes>
       </div>
     </div>

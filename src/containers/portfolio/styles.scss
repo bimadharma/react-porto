@@ -19,15 +19,15 @@
       text-align: center;
     }
   
-    .grid {
+    .grid-porto {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
       gap: 1.5rem;
     }
   
-    .project-card {
+    .project-card-porto {
       background: white;
-      border-radius: 8px;
+      border-radius: 10px;
       overflow: hidden;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease-in-out;

@@ -1,5 +1,5 @@
+import "./styles.scss"
 import { ExternalLink } from "lucide-react";
-import "./styles.scss";
 import PageHanderContect from "../../components/pageHeaderContent";
 import { BsInfoCircleFill } from "react-icons/bs";
 
@@ -32,9 +32,9 @@ const Projects = () => {
     <section id="projects" className="projects">
        <PageHanderContect headerText="Portofolio Project" icon={<BsInfoCircleFill size={40} />} />
       <div className="container">
-        <div className="grid">
+        <div className="grid-porto">
           {projects.map((project) => (
-            <div key={project.id} className="project-card">
+            <div key={project.id} className="project-card-porto">
               <img src={project.imageUrl} alt={project.title} className="project-image" />
               <div className="project-content">
                 <h3 className="project-title">{project.title}</h3>

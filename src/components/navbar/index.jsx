@@ -22,8 +22,8 @@ const data = [
     to: "/portfolio",
   },
   {
-    label: "Contact",
-    to: "/contact",
+    label: "Feedback",
+    to: "/feedback",
   },
 ];
 

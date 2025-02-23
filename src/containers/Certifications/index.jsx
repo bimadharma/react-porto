@@ -1,47 +1,53 @@
 import "./styles.scss";
+import { useEffect, useState } from "react";
+import api from "../../utils.js/api";
 import PageHanderContect from "../../components/pageHeaderContent";
 import { BsInfoCircleFill } from "react-icons/bs";
 
 const Projects = () => {
-  const projects = [
-    {
-      id: 1,
-      title: "Project Title 1",
-      description: "A brief description of the project and the technologies used.",
-      imageUrl: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=600",
-      link: "#"
-    },
-    {
-      id: 2,
-      title: "Project Title 2",
-      description: "A brief description of the project and the technologies used.",
-      imageUrl: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=600",
-      link: "#"
-    },
-    {
-      id: 3,
-      title: "Project Title 3",
-      description: "A brief description of the project and the technologies used.",
-      imageUrl: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=600",
-      link: "#"
-    }
-  ];
+  const [certificates, setCertificates] = useState([]);
+  const [loading, setLoading] = useState(true); 
+  const [error, setError] = useState(null); 
+  useEffect(() => {
+    const fetchCertificates = async () => {
+      try {
+        const response = await api.get("/certificates");
+        console.log(response.data); 
+        setCertificates(response.data);
+      } catch (error) {
+        console.error("Error fetching certificates:", error);
+        setError("Gagal memuat sertifikat.");
+      } finally {
+        setLoading(false); 
+      }
+    };
+    fetchCertificates();
+  }, []);
 
   return (
     <section id="projects" className="projects">
-       <PageHanderContect headerText="Certifications" icon={<BsInfoCircleFill size={40} />} />
+      <PageHanderContect headerText="Certifications" icon={<BsInfoCircleFill size={40} />} />
       <div className="container">
-        <div className="grid">
-          {projects.map((project) => (
-            <div key={project.id} className="project-card">
-              <img src={project.imageUrl} alt={project.title} className="project-image" />
-              <div className="project-content">
-                <h3 className="project-title">{project.title}</h3>
-                <p className="project-description">{project.description}</p>
+        {loading ? ( 
+          <div className="loading-container">
+            <div className="spinner"></div>
+            <p>Loading certifications...</p>
+          </div>
+        ) : error ? ( 
+          <p className="error-message">{error}</p>
+        ) : (
+          <div className="grid">
+            {certificates.map((certificate) => (
+              <div key={certificate.id} className="project-card">
+                <img src={certificate.link_img} alt={certificate.title} className="project-image" />
+                <div className="project-content">
+                  <h3 className="project-title">{certificate.title}</h3>
+                  <p className="project-description">{certificate.description}</p>
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );
