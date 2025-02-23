@@ -25,7 +25,7 @@ const Projects = () => {
   }, []);
 
   return (
-    <section id="projects" className="projects">
+    <section className="projects">
       <PageHanderContect headerText="Certifications" icon={<BsInfoCircleFill size={40} />} />
       <div className="container">
         {loading ? ( 

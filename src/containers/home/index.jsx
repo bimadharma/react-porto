@@ -1,11 +1,21 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FaDownload, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import "./styles.scss";
 import CV from "../../assets/file/CV - Bima Dharma Yahya.pdf";
 import ProfileImage from "../../assets/images/profile-1.jpeg";
 
+const titles = ["Front-end Developer", "UI/UX Designer"];
 const Home = () => {
   const [showModal, setShowModal] = useState(false);
+  const [currentTitle, setCurrentTitle] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTitle((prev) => (prev + 1) % titles.length);
+    }, 5000); 
+
+    return () => clearInterval(interval);
+  }, []);
 
   const handleShowCV = (e) => {
     e.preventDefault();
@@ -17,7 +27,7 @@ const Home = () => {
       <div className="home__text-wrapper">
         <img src={ProfileImage} alt="Profile" className="profile-image" />
         <h1>Bima Dharma Yahya</h1>
-        <h2 className="text-animation">Front end Developer</h2>
+        <h2 className="text-animation">{titles[currentTitle]}</h2>
 
         <div className="home__actions">
           <a href={CV} className="download-btn" onClick={handleShowCV}>

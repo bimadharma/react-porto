@@ -31,7 +31,7 @@ const About = () => {
         <div className="about__content__personalWrapper">
           <Animate
             play
-            duration={1.0}
+            duration={0.5}
             delay={0.5}
             start={{
               transform: "translateX(-900px)",
@@ -46,7 +46,7 @@ const About = () => {
 
           <Animate
             play
-            duration={1.0}
+            duration={0.5}
             delay={0.5}
             start={{
               transform: "translateX(-900px)",

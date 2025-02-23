@@ -29,7 +29,7 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="projects">
+    <section className="projects">
        <PageHanderContect headerText="Portofolio Project" icon={<BsInfoCircleFill size={40} />} />
       <div className="container">
         <div className="grid-porto">
