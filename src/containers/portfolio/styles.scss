@@ -22,7 +22,7 @@
   
     .grid-porto {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
+      grid-template-columns: repeat(2, 1fr);  
       gap: 4rem;
     }
   
@@ -40,7 +40,7 @@
   
       .project-image {
         width: 100%;
-        height: auto; //auto tingginya
+        max-height: 310px; //auto tingginya
         object-fit: cover;
       }
   
@@ -61,7 +61,7 @@
         .project-description {
           color: #666;
           margin-bottom: 1rem;
-          min-height: 80px; 
+          min-height: 30px; 
           overflow: hidden;
           text-overflow: ellipsis;
           -webkit-box-orient: vertical;
@@ -121,12 +121,21 @@
   }
 
   @media (max-width: 768px) {
+    .projects{
+
+    
     .project-image {
-      max-width: 100%; /* Pastikan gambar fleksibel */
+      max-width: 100%;
+      max-height: unset;
+      }
+
+    .grid-porto {
+      grid-template-columns: repeat(1, 1fr);
     }
   
     .grid-porto {
-      grid-template-columns: 1fr; /* Satu kolom di mobile */
+      grid-template-columns: 1fr; 
     }
+  }
   }
   

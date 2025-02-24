@@ -15,7 +15,7 @@ const data = [
   },
   {
     label: "Certifications",
-    to: "/Certifications",
+    to: "/certifications",
   },
   {
     label: "Portfolio",
