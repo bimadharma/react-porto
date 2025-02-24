@@ -12,7 +12,6 @@ import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   const location = useLocation();
-  console.log(location);
 
   return (
     <div className="App">

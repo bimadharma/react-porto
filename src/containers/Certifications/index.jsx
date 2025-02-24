@@ -12,7 +12,6 @@ const Projects = () => {
     const fetchCertificates = async () => {
       try {
         const response = await api.get("/certificates");
-        console.log(response.data); 
         setCertificates(response.data);
       } catch (error) {
         console.error("Error fetching certificates:", error);
