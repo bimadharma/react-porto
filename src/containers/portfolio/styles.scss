@@ -44,7 +44,6 @@
   
       .project-content {
         padding: 1.5rem;
-        text-align: center;
   
         .project-title {
           font-size: 1.5rem;
@@ -59,24 +58,23 @@
         }
   
         .project-link {
-          color: #007bff;
-          display: flex;
+          display: inline-flex; 
           align-items: center;
+          gap: 4px; 
+          background-color: #000000; 
+          border: 1px solid #000;
+          border-radius: 18px;
+          padding: 8px 12px; 
           text-decoration: none;
           font-weight: bold;
-          justify-content: center;
-  
+          color: #ffffff;
+          max-width: fit-content; 
           &:hover {
-            color: #0056b3;
+            color: #000000;
+            background-color: #ffffff; 
           }
         }
+        
       }
     }
   }
-
-  @media only screen and (max-width:768px) { 
-    .grid {
-        transform: scale(0.9);
-    }
-  }
-  

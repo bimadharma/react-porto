@@ -1,4 +1,4 @@
-import "./styles.scss";
+import "./styles_certifications.scss";
 import { useEffect, useState } from "react";
 import api from "../../utils.js/api";
 import PageHanderContect from "../../components/pageHeaderContent";
