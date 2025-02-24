@@ -129,6 +129,7 @@ Feel free to fork the repository and submit a pull request. Any contributions ar
 ## Contact
 
 - **GitHub:** [github.com/bimadharma](https://github.com/bimadharma)
+- **Email:** [bimadharmayahya@gmail.com](bimadharmayahya@gmail.com)
 - **LinkedIn:** [https://www.linkedin.com/in/bima-dharma-yahya](https://www.linkedin.com/in/bima-dharma-yahya)
 
 
