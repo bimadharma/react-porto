@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 import { FaDownload, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import "./styles.scss";
 import CV from "../../assets/file/CV - Bima Dharma Yahya.pdf";
-import ProfileImage from "../../assets/images/profile-1.jpeg";
+import ProfileImage from "../../assets/images/profile-1.png";
 
-const titles = ["Front-end Developer", "UI/UX Designer"];
+const titles = ["IT Developer", "Data Analytics"];
 const Home = () => {
   const [showModal, setShowModal] = useState(false);
   const [currentTitle, setCurrentTitle] = useState(0);
