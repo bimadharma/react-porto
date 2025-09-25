@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { FaDownload, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import "./styles.scss";
 import CV from "../../assets/file/CV - Bima Dharma Yahya.pdf";
-import ProfileImage from "../../assets/images/profile-1.png";
+import ProfileImage from "../../assets/images/profile-1.jpg";
 
 const titles = ["IT Developer", "Data Analytics"];
 const Home = () => {
